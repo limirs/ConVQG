@@ -53,22 +53,27 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">ConVQG: Contrastive Visual Question Generation with Multimodal Guidance</h1>
+            
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Li Mi</a><sup>*</sup>,</span>
+                <a href="https://people.epfl.ch/li.mi?lang=en" target="_blank">Li Mi</a><sup>*</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Syrielle Montariol</a><sup>*</sup>,</span>
+                  <a href="https://smontariol.github.io/" target="_blank">Syrielle Montariol</a><sup>*</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Javiera Castillo-Navarro</a><sup>*</sup>,</span>
+                    <a href="https://people.epfl.ch/javiera.castillonavarro/?lang=en" target="_blank">Javiera Castillo-Navarro</a><sup>*</sup>,</span>
                     <span class="author-block">
-                      <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Xianjie Dai</a>,</span>
-                      <span class="author-block">
-                        <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Antoine Bosselut</a>,</span>
-                        <span class="author-block">
-                          <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Devis Tuia</a>,</span>
+                      <a href="https://people.epfl.ch/xianjie.dai/?lang=en" target="_blank">Xianjie Dai</a>,</span>
+                      
                     
                   </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">
+                      <a href="https://atcbosselut.github.io/" target="_blank">Antoine Bosselut</a> and </span>
+                      <span class="author-block">
+                        <a href="https://people.epfl.ch/devis.tuia" target="_blank">Devis Tuia</a></span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
@@ -76,18 +81,27 @@
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
 
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">
+                      <p><br></p>
+                      <a href="http://www.epfl.ch/labs/eceo/"><img src="static/images/Fig_ECEO.png" width="180px" margin-left="20px" margin-right="20px" alt="ECEO Logo"/></a></span>
+                      <a href="https://nlp.epfl.ch/"><img src="static/images/Fig_NLP.png" width="100px"  margin-left="20px" margin-right="20px" alt="NLP Logo"/></a></span> 
+                      <!-- <a href="http://epfl.ch"><img src="static/images/Fig_EPFL.png" width="180px"  margin-left="20px"  margin-right="20px" alt="EPFL Logo"/></a></span> -->
+                  </div>
+
+
                   <div class="column has-text-centered">
                     <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                      <!-- Arxiv PDF link -->
+                      <!-- <span class="link-block">
+                        <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
                         </span>
                         <span>Paper</span>
                       </a>
-                    </span>
+                    </span> -->
 
                     <!-- Supplementary PDF link -->
                     <span class="link-block">
@@ -101,7 +115,7 @@
                   </span>
 
                   <!-- Github link -->
-                  <span class="link-block">
+                  <!-- <span class="link-block">
                     <a href="https://github.com/YOUR REPO HERE" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -109,7 +123,7 @@
                     </span>
                     <span>Code</span>
                   </a>
-                </span>
+                </span> -->
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
@@ -129,41 +143,92 @@
   </div>
 </section>
 
-<!-- Paper abstract -->
+<!-- Paper summary -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">Summary</h2>
         <div class="content has-text-justified">
           <p>
-            Asking questions about visual environments is a crucial way for intelligent agents to understand rich multi-faceted scenes, raising the importance of Visual Question Generation (VQG) systems. Apart from being grounded to the image, existing VQG systems can use textual constraints, such as expected answers or knowledge triplets, to generate focused questions. These constraints allow VQG systems to specify the question content or leverage external commonsense knowledge that can not be obtained from the image content only. However, generating focused questions using textual constraints while enforcing a high relevance to the image content remains a challenge, as VQG systems often ignore one or both forms of grounding. In this work, we propose Contrastive Visual Question Generation (ConVQG), a method using a dual contrastive objective to discriminate questions generated using both modalities from those based on a single one. Experiments on both knowledge-aware and standard VQG benchmarks demonstrate that ConVQG outperforms the state-of-the-art and generates image-grounded, text-guided, and knowledge-rich questions. Our human evaluation results also show preference for ConVQG questions compared to non-contrastive baselines.
+            Asking questions about visual environments is a crucial way for intelligent agents to understand rich multi-faceted scenes, raising the importance of Visual Question Generation (VQG) systems. Generating focused questions using textual constraints while enforcing a high relevance to the image content remains a challenge, as VQG systems often ignore one or both forms of grounding
           </p>
+          <p>
+            To address that, we propose <b>ConVQG</b>, a Contrastive Visual Question Generation method that
+            <ol type="I">
+              <li>
+                drives the joint embedding away from single modality questions by two modality-specific <b>contrastive objectives</b>.
+              </li>
+              <li>
+                generates <b>text-guided, image-grounded and knowledge-enriched</b> questions for images.
+              </li>
+            </ol>
+          </p>
+
+          <figure class="image mod-figure">
+            <img src="static/images/Fig_Glance.png" alt="Modalities overview">
+          </figure>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
+<!-- End paper summary -->
+
+
+<!-- Method -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <figure class="image mod-figure">
+            <img src="static/images/Fig_Pipeline.png" alt="Modalities overview">
+          </figure>
+          <p>
+            Pipeline of the ConVQG method. During training, an encoder-decoder VQG framework is powered by two additional branches for image-based question generation (IQGM) and text-based question generation (TQGM) (left part). Then, contrastive losses discriminate image-text joint embeddings with the one from single modality only (right part). During inference, only the encoder-decoder framework is activated.
+          </p>
+          <figure class="image mod-figure">
+            <img src="static/images/Fig_Method.png" alt="Method overview">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Method -->
+
+
 
 
 <!-- Image carousel -->
-<section class="hero is-small">
+<section class="section hero is-small is-light">
   <div class="hero-body">
     <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title">Question Generation Results</h2>
+      </div>  
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/Fig_Pipeline.png" alt="MY ALT TEXT"/>
+        <img src="static/images/Fig_Example1.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Pipeline of the ConVQG method. During training, an encoder-decoder VQG framework is powered by two additional branches for image-based question generation (IQGM) and text-based question generation (TQGM) (left part). Then, contrastive losses discriminate image-text joint embeddings with the one from single modality only (right part). During inference, only the encoder-decoder framework is activated.
+          <b>Grounding</b>: ConVQG generations have a better grounding to both image and text compared to the baseline.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/Fig_Example2.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          <b>Diversity</b>: ConVQG allows to control the diversity of questions with different text/image inputs.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/Fig_Example3.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          <b>Transferability</b>: ConVQG can transfer to unseen dataset and text constraints (fact sentences) without further training.
         </h2>
       </div>
   </div>
@@ -178,14 +243,13 @@
 
 
 <!-- Paper poster -->
-<section class="hero is-small is-light">
+<section class="section hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/AAAI2024_Poster.pdf" width="100%" height="550">
+      <div class="columns is-centered has-text-centered">
+      <iframe  src="static/pdfs/AAAI2024_Poster.pdf" width="80%" height="550">
           </iframe>
-        
+      </div>  
       </div>
     </div>
   </section>
@@ -200,7 +264,6 @@
     </div>
 </section>
 <!--End BibTex citation -->
-
 
   <footer class="footer">
   <div class="container">
