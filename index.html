@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta name="description" content="ConVQG: Contrastive Visual Question Generation with Multimodal Guidance">
+  <meta property="og:title" content="ConVQG: Contrastive Visual Question Generation with Multimodal Guidance"/>
+  <meta property="og:description" content="ConVQG: Contrastive Visual Question Generation with Multimodal Guidance"/>
   <meta property="og:url" content="URL OF THE WEBSITE"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/image/your_banner_image.png" />
@@ -14,13 +14,13 @@
   <meta property="og:image:height" content="630"/>
 
 
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <meta name="twitter:title" content="ConVQG: Contrastive Visual Question Generation with Multimodal Guidance">
+  <meta name="twitter:description" content="ConVQG: Contrastive Visual Question Generation with Multimodal Guidance">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
   <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="keywords" content="visual question generation, contrastive learning, vision and language">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -168,6 +168,10 @@
           <figure class="image mod-figure">
             <img src="static/images/Fig_Glance.png" alt="Modalities overview">
           </figure>
+
+          <p>
+            ConVQG at a glance. An image and a text input are processed through a multimodal module, leading to the image text joint embedding. Pre-trained modules produce image-only and text-only question embeddings. A contrastive loss is then optimized to make the joint embedding close to the real question embedding and far from the single modality ones. By design, ConVQG generates questions that are image-grounded (in green) and that meet the requirements of the text constraint (in yellow).
+          </p>
         </div>
       </div>
     </div>
@@ -187,7 +191,7 @@
             <img src="static/images/Fig_Pipeline.png" alt="Modalities overview">
           </figure>
           <p>
-            Pipeline of the ConVQG method. During training, an encoder-decoder VQG framework is powered by two additional branches for image-based question generation (IQGM) and text-based question generation (TQGM) (left part). Then, contrastive losses discriminate image-text joint embeddings with the one from single modality only (right part). During inference, only the encoder-decoder framework is activated.
+            The pipeline of the ConVQG method. During training, an encoder-decoder VQG framework is powered by two additional branches for image-based question generation (IQGM) and text-based question generation (TQGM) (left part). Then, contrastive losses discriminate image-text joint embeddings with the one from single modality only (right part). During inference, only the encoder-decoder framework is activated.
           </p>
           <figure class="image mod-figure">
             <img src="static/images/Fig_Method.png" alt="Method overview">
@@ -260,7 +264,12 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@inproceedings{mi2024convqg,
+      title={ConVQG: Contrastive Visual Question Generation with Multimodal Guidance}, 
+      author={Li Mi, Syrielle Montariol, Javiera Castillo-Navarro, Xianjie Dai, Antoine Bosselut, Devis Tuia},
+      year={2024},
+      booktitle={AAAI}
+      }</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
